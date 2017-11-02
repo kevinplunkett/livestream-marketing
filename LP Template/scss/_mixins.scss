@@ -1,0 +1,16 @@
+//_mixins.scss
+
+@mixin clearfix {
+	&:after {
+		display: table;
+		clear: both;
+		content: ''; 
+	}
+}
+
+@mixin transition($transition...) {
+	-moz-transition:	$transition;
+	-o-transition:		$transition;
+	-webkit-transition:	$transition;
+	transition:			$transition;
+}

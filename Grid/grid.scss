@@ -1,0 +1,105 @@
+
+$breakpoint-desktop-min: 1025px;
+$breakpoint-tablet-max: 1024px;
+$breakpoint-tablet-min: 768px;
+$breakpoint-mobile-max: 767px;
+
+.padding {
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left;
+}
+
+.margin {
+	margin-left: 10px;
+	margin-right: 10px;
+	float: left;
+}
+
+@mixin clearfix {
+	&:after {
+		display: table;
+		clear: both;
+		content: ''; 
+	}
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.l-wrap {
+	max-width: 1140px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(blue, 0.25);
+	@include clearfix;
+}
+
+.column {
+	width: calc((100% - 20px * 12) / 12);
+	height: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+	background: rgba(0,0,255,0.25);
+	float: left;
+}
+
+.grid-inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80px;
+	text-align: center;
+	background: rgba(red, 0.25);
+}
+
+.l-guest-article {
+	@include clearfix;
+	margin-top: 20px;
+	.grid-item {
+		@media (min-width: $breakpoint-tablet-min) {
+			padding-left: 10px;
+			padding-right: 10px;
+			float: left;
+		}
+	}
+	.l-guest {
+		@media (min-width: $breakpoint-tablet-min) {
+			width: percentage(4/12);
+			float: left;
+		}
+		@media (min-width: $breakpoint-desktop-min) {
+			width: percentage(2/12);
+		}
+	}
+	.l-main { 
+		margin-top: 20px;
+		@media (min-width: $breakpoint-tablet-min) {
+			width: percentage(8/12);
+			margin-top: 0;
+			float: left;
+		}
+		@media (min-width: $breakpoint-desktop-min) {
+			width: percentage(7/12);
+		}
+	}
+	.l-sidebar {
+		margin-top: 20px;
+		@media (min-width: $breakpoint-tablet-min) {
+			width: percentage(8/12);
+			float: right;
+		}
+			@media (min-width: $breakpoint-desktop-min) {
+			width: percentage(3/12);
+			margin-top: 0;
+		}
+	}
+
+}

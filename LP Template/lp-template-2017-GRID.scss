@@ -1,0 +1,153 @@
+@import 'scss/buttons';
+//@import 'scss/fonts';
+//@import 'scss/variables';
+//@import 'scss/mixins';
+@import 'scss/columns';
+//@import 'scss/colors';
+
+
+//EXTENDS
+//EXTENDS
+//EXTENDS
+.zero {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.gutters {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+//GLOBAL RULES
+//GLOBAL RULES
+html {
+	overflow: hidden;
+	box-sizing: border-box;
+	@extend .zero;
+}
+
+body { 
+	perspective: 1px;
+	transform-style: preserve-3d;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	@extend .zero;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+
+//RULES
+//RULES
+
+h1, h2 { color: $lsgrey; }
+p,li,h3 { color: $lsblack; }
+
+.grid {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	@include clearfix;
+	@media only screen and (min-width: $hd-min) {
+		width: 1440px;
+	}
+
+}
+
+.logo {
+	width: 139px;
+	height: 35px;
+	margin: 20px auto;
+	background-image: url('https://lp.livestream.com/rs/582-GOU-684/images/logo-color.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	@media only screen and (min-width: $desktop-min) {
+		margin: 30px auto;
+	}
+}
+
+.hero {
+	max-width: 1440px;
+	height: 240px;
+	background-size: 120%;
+	background-position: 100% 20%;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	@media only screen and (min-width: $tablet-min) {
+		height: 420px;
+	}
+	@media only screen and (min-width: $hd-min) {
+		height: 480px;
+		background-size: 100%;
+		background-position: center top;
+	}
+}
+
+.text-block {
+	padding: 30px;
+	background-color: #FFF;
+	z-index: 999;
+	@media only screen and (min-width: $tablet-min) {
+		padding: 50px;
+	}	
+	@media only screen and (min-width: $desktop-min) {
+		padding: 80px;
+		min-width: 640px;
+	}
+}
+
+.text-block__one { 
+	@media only screen and (min-width: $desktop-min) {
+		transform: translateY(-80px);
+	}
+}
+
+.image-block {
+	transform: translateZ(.2px) scale(.8);
+	margin-bottom: -80px;
+	z-index: 1;
+	@media only screen and (min-width: $desktop-min) {
+		transform: translateZ(.2px) scale(.8) translateY(-200px);
+		margin-bottom: -200px;
+		min-width: 720px;
+	}
+	.image-block__image {
+		height: 270px;
+		margin: 0 auto;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		@media only screen and (min-width: $tablet-min) {
+			height: 480px;
+		}
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left:0;
+		right:0;
+	}
+}
+
+.form-wrap { margin-top: 30px; }
+
+footer { 
+	margin-bottom: 30px;
+	text-align: center;
+	p,a {
+		color: $lsgrey;
+		padding: 0;
+		margin: 0;
+	}
+}

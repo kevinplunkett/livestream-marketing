@@ -1,0 +1,85 @@
+//_buttons.scss
+@import 'fonts';
+@import 'colors';
+@import 'mixins';
+
+.button {
+	padding: 15px;
+	border-radius: 4px;
+	height: 44px;
+	font-family: $ms-500;
+	font-weight: 500;
+	font-size: 13px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.red-button {
+	@extend .button;
+	color: #FFF;
+	background-color: $lsred;
+	@include transition(background-color .25s,box-shadow .25s);
+	&:hover { 
+		background-color: lighten($lsred, 10%);
+		box-shadow:0 8px 25px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.2);
+	}
+}
+
+
+.orange-button {
+	@extend .button;
+	color: #FFF;
+	background-color: $lsorange;
+	@include transition(background-color .25s,box-shadow .25s);
+	&:hover { 
+		background-color: lighten($lsorange, 10%);
+		box-shadow:0 8px 25px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.2);
+	}
+}
+
+
+.green-button {
+	@extend .button;
+	color: #FFF;
+	background-color: $lsgreen;
+	@include transition(background-color .25s,box-shadow .25s);
+	&:hover { 
+		background-color: lighten($lsgreen, 10%);
+		box-shadow:0 8px 25px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.2);
+	}
+}
+
+
+.blue-button {
+	@extend .button;
+	color: #FFF;
+	background-color: $lsblue;
+	@include transition(background-color .25s,box-shadow .25s);
+	&:hover { 
+		background-color: lighten($lsblue, 10%);
+		box-shadow:0 8px 25px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.2);
+	}
+}
+
+
+.purple-button {
+	@extend .button;
+	color: #FFF;
+	background-color: $lspurple;
+	@include transition(background-color .25s,box-shadow .25s);
+	&:hover { 
+		background-color: lighten($lspurple, 10%);
+		box-shadow:0 8px 25px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.2);
+	}
+}
+
+.black-button {
+	@extend .button;
+	color: #FFF;
+	background-color: $lsblack;
+	@include transition(background-color .25s,box-shadow .25s);
+	&:hover { 
+		background-color: lighten($lsblack, 10%);
+		box-shadow:0 8px 25px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.2);
+	}
+}

@@ -1,0 +1,92 @@
+//_fonts.scss
+@import 'variables';
+
+@font-face {
+	font-family:'MuseoSans-100';
+	src:url('//lp.livestream.com/rs/582-GOU-684/images/museo100.eot');
+	src:url('//lp.livestream.com/rs/582-GOU-684/images/museo100ie.eot?#iefix') format("embedded-opentype"),
+		url('//lp.livestream.com/rs/582-GOU-684/images/museo100.woff') format("woff"),
+		url('//lp.livestream.com/rs/582-GOU-684/images/museo100.ttf') format("truetype")
+}
+@font-face {
+	font-family:'MuseoSans-300';
+	src:url('//lp.livestream.com/rs/582-GOU-684/images/museo300.eot');
+	src:url('//lp.livestream.com/rs/582-GOU-684/images/museo300ie.eot?#iefix') format("embedded-opentype"),
+		url('//lp.livestream.com/rs/582-GOU-684/images/museo300.woff') format("woff"),
+		url('//lp.livestream.com/rs/582-GOU-684/images/museo300.ttf') format("truetype")
+}
+@font-face {
+	font-family:'MuseoSans-500';
+	src:url('//lp.livestream.com/rs/582-GOU-684/images/museo500.eot');
+	src:url('//lp.livestream.com/rs/582-GOU-684/images/museo500ie.eot?#iefix') format("embedded-opentype"),
+		url('//lp.livestream.com/rs/582-GOU-684/images/museo500.woff') format("woff"),
+		url('//lp.livestream.com/rs/582-GOU-684/images/museo500.ttf') format("truetype")
+}
+@font-face {
+	font-family:'MuseoSans-700';
+	src:url('//lp.livestream.com/rs/582-GOU-684/images/museo700.eot');
+	src:url('//lp.livestream.com/rs/582-GOU-684/images/museo700ie.eot?#iefix') format("embedded-opentype"),
+		url('//lp.livestream.com/rs/582-GOU-684/images/museo700.woff') format("woff"),
+		url('//lp.livestream.com/rs/582-GOU-684/images/museo700.ttf') format("truetype")
+}
+@font-face {
+	font-family:'MuseoSans-900';
+	src:url('//lp.livestream.com/rs/582-GOU-684/images/museo900.eot');
+	src:url('//lp.livestream.com/rs/582-GOU-684/images/museo900ie.eot?#iefix') format("embedded-opentype"),
+		url('//lp.livestream.com/rs/582-GOU-684/images/museo900.woff') format("woff"),
+		url('//lp.livestream.com/rs/582-GOU-684/images/museo900.ttf') format("truetype")
+}
+
+$ms-100: 'MuseoSans-100';
+$ms-300: 'MuseoSans-300';
+$ms-500: 'MuseoSans-500';
+$ms-700: 'MuseoSans-700';
+$ms-900: 'MuseoSans-900';
+
+h1 {
+	font-family: $ms-100;
+	font-weight: 100;
+	margin-top: 0;
+	font-size: 32px;
+	line-height: 46px;
+	@media only screen and (min-width: $tablet-min) {
+		font-size: 42px;
+		line-height: 58px;
+	}
+}
+
+h2 {
+	font-family: $ms-300;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 36px;
+}
+
+h3 {
+	font-family: $ms-100;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 26px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+ul { padding-left: 20px; }
+
+p, li {
+	font-family: $ms-100;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 32px;
+}
+
+p { padding-bottom: 20px; }
+
+a {
+	text-decoration: none;
+}
+
+strong {
+	font-family: $ms-500;
+	font-weight: 500;	
+}
